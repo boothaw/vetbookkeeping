@@ -1,0 +1,514 @@
+/* custom css */
+
+:root {
+  --deep-navy: #0d1f47;
+  --navy: #152c5d;
+  --teal: #40beb6;
+  --teal-hover: #00e3d5;
+  --gradient: linear-gradient(#0d1f47 100%, #152c5d 100%);
+}
+body {
+  background-color: var(--navy);
+  color: #fff;
+  font-family: "barlow-condensed", sans-serif;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--teal);
+  font-family: barlow, sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  margin-top: 0;
+}
+h1 {
+  font-size: 80px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 36px;
+}
+a {
+  text-decoration: none;
+}
+.outer-wrapper {
+  width: 90%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inner-wrapper {
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.teal-btn {
+  border: none;
+  position: relative !important;
+  display: block !important;
+  width: fit-content !important;
+  width: -moz-fit-content !important;
+  min-width: 200px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  background: var(--teal);
+  border-radius: 100px !important;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  will-change: transform;
+
+  & p {
+    position: relative !important;
+    z-index: 5;
+    text-align: center;
+    text-transform: uppercase;
+    color: white !important;
+    font-size: 20px !important;
+    margin-bottom: 0 !important;
+    line-height: inherit !important;
+    border: none;
+    letter-spacing: 0.1em;
+    margin-top: 0 !important;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var(--teal-hover);
+    width: 15%;
+    padding-bottom: 15%;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto;
+    transition: transform 0.6s ease;
+  }
+  &:hover::after {
+    transform: scale(12);
+    cursor: pointer;
+  }
+}
+.alt-teal-btn {
+  border: none;
+  position: relative !important;
+  display: block !important;
+  width: fit-content !important;
+  width: -moz-fit-content !important;
+  min-width: 200px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  background: var(--teal-hover);
+  border-radius: 100px !important;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  will-change: transform;
+
+  & p {
+    position: relative !important;
+    z-index: 5;
+    text-align: center;
+    text-transform: uppercase;
+    color: white !important;
+    font-size: 20px !important;
+    margin-bottom: 0 !important;
+    line-height: inherit !important;
+    border: none;
+    letter-spacing: 0.1em;
+    margin-top: 0 !important;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var(--navy);
+    width: 15%;
+    padding-bottom: 15%;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto;
+    transition: transform 0.6s ease;
+  }
+  &:hover::after {
+    transform: scale(12);
+    cursor: pointer;
+  }
+}
+.ghost-btn {
+  border: 2px solid rgba(0, 227, 213, 0.2);
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 120px !important;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--teal);
+  transition: all 0.3s ease;
+  font-size: 28px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .book-icon {
+    opacity: 0.2;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    border: 2px solid var(--teal);
+    color: var(--teal);
+
+    .book-icon {
+      opacity: 1;
+    }
+  }
+}
+.accordion.ghost-btn {
+  flex-direction: column;
+
+  .accordion-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .accordion-body {
+    display: none;
+    color: #fff;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+
+    & p {
+      margin-left: 0 !important;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+.accordion.ghost-btn.is-open {
+  border-radius: 60px !important;
+  border-color: var(--teal);
+
+  .accordion-body {
+    display: block;
+    opacity: 1;
+  }
+  .book-icon {
+    opacity: 1;
+  }
+}
+.accordion.ghost-btn {
+  margin-bottom: 30px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+
+  .teal-btn {
+    margin: 15px;
+  }
+}
+/* header */
+.header {
+  padding: 25px;
+}
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.ivet-logo {
+  & svg {
+    width: 140px;
+  }
+  & path {
+    fill: var(--teal);
+  }
+}
+
+/* footer */
+.footer-cta {
+  background-image: url(/wp-content/uploads/2024/06/BOOK-CTA.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-cta__content {
+    border-radius: 16px;
+    background: var(--teal);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-right: 0;
+    margin-left: auto;
+
+    & h2 {
+      text-align: center;
+      color: #fff;
+      text-transform: none;
+    }
+
+    .teal-btn {
+      background-color: var(--teal-hover);
+    }
+    .teal-btn:hover {
+      background-color: var(--hover);
+    }
+  }
+}
+.footer-wave {
+  width: 100%;
+
+  &.top {
+    position: absolute;
+    top: -1px;
+  }
+  &.bottom {
+    position: absolute;
+    bottom: -1px;
+  }
+}
+.copyright {
+  padding: 20px;
+}
+.copyright-left {
+  display: flex;
+  align-items: center;
+
+  & a,
+  p {
+    color: var(--teal);
+  }
+  & svg {
+    width: 140px;
+    margin-right: 24px;
+  }
+}
+
+/*  components */
+
+.cta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .teal-cta {
+    background-color: var(--teal);
+    padding: 20px 40px;
+    height: 300px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 40px);
+    margin: 10px;
+    background-image: url(/wp-content/uploads/2024/06/BOOK-Coin.png);
+    background-position: center;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    transition: all 0.6s ease;
+
+    &:hover {
+      background-image: none;
+
+      .teal-cta__content {
+        display: block;
+        transition: all 0.6s ease;
+      }
+      .teal-cta__title {
+        margin-bottom: 10px;
+        text-decoration: line-through;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  .teal-cta__title {
+    color: #fff;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+
+  .teal-cta__content {
+    display: none;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+
+.three-buttons {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .ghost-btn {
+    width: 46%;
+    margin: 10px;
+    min-width: 300px;
+  }
+}
+
+/* home */
+
+.page-template-homepage {
+  .home-header {
+    height: 600px;
+    background-image: url(/wp-content/uploads/2024/06/BOOK-Hero.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+
+    .entry-title {
+      margin-bottom: 40px;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+  & h2.wp-block-heading {
+    color: var(--teal);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:first-of-type {
+      max-width: 1020px;
+    }
+  }
+}
+
+/* default page template */
+.page-template-default {
+  .entry-header {
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: var(
+      --gradient,
+      linear-gradient(313deg, #0d1f47 24.63%, #152c5d 68.29%)
+    );
+    border-radius: 16px;
+
+    .entry-title {
+      font-size: 80px;
+      text-align: center;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+.wp-block-columns.full-width {
+  background-color: var(--deep-navy);
+  width: 100%;
+  padding: 96px;
+  margin-bottom: 0;
+
+  > * {
+    max-width: 800px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.wp-block-columns.full-width.no-bottom {
+  padding-bottom: 0;
+}
+
+.entry-content {
+  & > h2,
+  h3,
+  ul,
+  ol,
+  li,
+  p:not(.teal-btn p),
+  a:not(.teal-btn) {
+    max-width: 800px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  & > ul {
+    padding-left: 0;
+
+    & li {
+      margin-left: 1.5em;
+
+      &::marker {
+        color: var(--teal);
+      }
+    }
+    & li strong {
+      font-weight: bold;
+      color: var(--teal);
+    }
+  }
+  & ul,
+  ol,
+  li,
+  p:not(.teal-btn p),
+  a:not(.teal-btn) {
+    font-size: 20px;
+  }
+}
+
+/* process page  */
+
+.page-id-1881 {
+  & h3.wp-block-heading {
+    margin-bottom: 0;
+    font-size: 32px;
+  }
+  & .entry-content > ul {
+    margin-top: 20px;
+  }
+  & .entry-content p {
+    margin-top: 10px;
+  }
+}
+
+.book-section {
+  padding: 20px 0;
+  display: flex;
+  width: 100%;
+  background: linear-gradient(180deg, var(--deep-navy) 60%, var(--navy) 50%);
+
+  & > img {
+    max-width: 800px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
